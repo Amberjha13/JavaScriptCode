@@ -1,3 +1,4 @@
+
 function findNonReapting(str){
     
     let end = 0;
@@ -18,5 +19,23 @@ function findNonReapting(str){
     }
     return longest;
 }
+function maxChar(str) {
+ let charMap = {};
+ let maxChar = ''
+ let maxNum = 0;
+  for(char of str){
+      if(char!=' '){
+      charMap[char] = (charMap[char]||0)+1;
+      if(charMap[char]>maxNum){
+          maxNum = charMap[char]
+          maxChar = char 
+      }
+          
+      }
+  }
+   let {y, ...newCharMap} = charMap
+  return newCharMap;
+}
+console.log(maxChar('my name is amber'))
 
 console.log(findNonReapting('aaabcdefghjikklm'))
